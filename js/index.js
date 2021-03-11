@@ -81,7 +81,7 @@ contentPar[4].textContent = siteContent['main-content']['vision-content']
 // Bottom content
 const contact = document.querySelectorAll('.contact h4')
 contact[0].textContent = siteContent['contact']['contact-h4']
-// conact info
+// contact info
 const address = document.querySelector('.contact p:nth-child(2)')
 address.textContent = siteContent['contact']['address']
 const phone = document.querySelector('.contact p:nth-child(3)')
@@ -92,3 +92,19 @@ email.textContent = siteContent['contact']['email']
 // footer
 const foot = document.querySelector('footer p')
 foot.textContent = siteContent['footer']['copyright']
+
+// color change
+topNav.forEach(element => element.style.color = 'green')
+
+// prepend
+const homeLink = document.createElement('a')
+homeLink.href = '#'
+homeLink.textContent = "Home"
+document.querySelector('nav').prepend(homeLink)
+homeLink.style.color = 'green'
+// appendChild
+const dom = document.createElement('a')
+dom.href = '#'
+dom.textContent = 'DOM'
+document.querySelector('nav').appendChild(dom)
+dom.style.color = 'green'
